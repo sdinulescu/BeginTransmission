@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 \
+************************************\
+Begin Transmission\
+\
+A collaboration by:\
+Stejara Dinulescu\
+Del Cook\
+************************************\
+\
+This project is an instrument that is \'93played\'94 through movement, detected by a webcam using cinder/openCV and passed by OSC to a Processing file that drives the sound.\
+\
+Note: this project can only be run on MacOS. To run this program using Xcode, the user must download cinder (via homebrew) and create a cinder project that includes the attached source files. \
+\
+Both the cinder project and the processing project must be running in tandem. Xcode project file can be found in cinder folder -> myProjects -> BeginTransmission -> xCode -> BeginTransmission.xcodeproj. Processing file can be found in cinder folder -> myProjects -> BeginTransmission -> BeginTransmission_Processing - BeginTransmission_Processing.pde.\
+\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\sl400\qc\partightenfactor0
+\cf2 Artist Statements\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf2 	Illustrating human movement within a space, this system is designed to produce sound based on motion calculated through frame differencing. This is where pixel information from the previous webcam frame is subtracted from pixel information from the current webcam frame to yield a matrix that contains information about the difference in the two frames, which is equivalent to detecting the change between the two frames, or consequently, the motion. This utilizes two programs, one written in C++ using openCV and cinder libraries, and the other in Java through the Processing IDE. The first program calculates the differences between the two frames, as well as values for the maximum amount of motion and the position of where the maximum motion is. This \'93maximum motion\'94 value is calculated by thresholding pixel coloration to black/white, where black is no motion (i.e. change) and white is motion, and summing that within a square area. Whichever square area has the greatest count is considered to have the maximum motion, and that value is passed, along with position, to the Processing program through open sound control (OSC) messages.\
+	The second component of this system is what creates the sound and visualization based on the values that it receives from the previous program. Using triangle oscillators, the pitch of the system varies based on x and y positions of the motion detected, and the amplitude of the system depends on the maximum motion value (i.e. the more motion detected, the louder it is). Furthermore, the visualization is drawn by bezier curves that use the x position, y position and maximum motion value of the previous frame and the current frame. Therefore, human motion and interaction with the system in a specific space creates a unique piece of music and ensuing visualization. In this way, this particular system is an antenna for motion or change within a space, where the interaction between human and computer is transmitted into two different sensory modalities: sound and 2D visual interpretation. \'a0\'a0\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\fi960\sl400\partightenfactor0
+\cf2 - Stejara Dinulescu\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\
+\
+\pard\pardeftab720\fi960\sl400\partightenfactor0
+\cf2 Improvisation and performance art is, for me, about constructing an environment in which the performer may \'93live\'94 for whatever length of time they wish. In the environment, they are given various but specific tools with which they may use for survival and recreation in their pocket universe. In this particular environment is provided a wonderful system that incorporates both movement and music that is used in tandem with a most surprising combination of instruments devised by me. I am very grateful to my friend Stejara for asking me to work on this project with her. This is the second collaboration that she and I have done together and I am certain it will not be the last. Please enjoy the transmissions. \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\fi960\sl400\partightenfactor0
+\cf2 - Del Cook\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+}
